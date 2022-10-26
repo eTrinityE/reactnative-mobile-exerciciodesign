@@ -1,11 +1,13 @@
-import { Image, Text, View } from "react-native";
+import { Alert, Image, Text, TouchableOpacity, View } from "react-native";
 import { getDataByID } from "../utils/data";
 import { styles } from "../utils/styles";
 
-export default function Card({ id }) {
+export default function Card({ id, onPress}) {
   const { text, image } = getDataByID(id);
-  return (<View style={styles.card}>
+  return (
+  <TouchableOpacity style={styles.card} onPress={onPress(id)}>
     <Image style={styles.cardImage} resizeMode='contain' source={image} />
     <Text style={styles.cardText}>{text}</Text>
-  </View>);
+  </TouchableOpacity>
+  );
 }

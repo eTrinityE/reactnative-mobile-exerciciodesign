@@ -50,7 +50,8 @@ export const styles = StyleSheet.create({
       borderRadius: 10,
       width: '48%',
       alignItems: 'center',
-      paddingVertical: 28
+      paddingVertical: 28,
+      marginTop: 10
     },
     cardImage: {
       height: 120,
